@@ -1,0 +1,44 @@
+{
+  "name": "unoserver-api",
+  "version": "3.2.5",
+  "private": true,
+  "description": "unoserver as a webservice",
+  "author": {
+    "name": "Aaron.Fan",
+    "email": "xzeertacat@gmail.com",
+    "url": "https://github.com/xzeertacat"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/xzeertacat/unoserver-api/issues"
+  },
+  "homepage": "https://github.com/xzeertacat/unoserver-api",
+  "main": "index.js",
+  "engines": {
+    "node": ">=10.20.1"
+  },
+  "scripts": {
+    "test": "standard && npm audit && tap --reporter=spec test/**/*.js",
+    "coverage": "tap test/*.js --coverage",
+    "coveralls": "tap --cov --coverage-report=lcov test/**/*.js && cat coverage/lcov.info | coveralls",
+    "start": "node standalone.js",
+    "standard-fix": "standard --fix",
+    "refresh": "rm -rf node_modules && rm package-lock.json && npm install"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/xzeertacat/unoserver-api"
+  },
+  "dependencies": {
+    "hapi": "16.7.0",
+    "inert": "4.2.1",
+    "uuid": "8.3.2",
+    "mime": "^1.3.4",
+    "underscore": "^1.8.3"
+  },
+  "devDependencies": {
+    "coveralls": "3.1.1",
+    "standard": "16.0.4",
+    "tap": "15.1.5"
+  }
+}
